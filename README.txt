@@ -34,7 +34,7 @@ BACKEND SETUP (Express API)
    PORT=4000
    DB_HOST=127.0.0.1
    DB_USER=root
-   DB_PASSWORD=J@ypatel1205
+   DB_PASSWORD=your_own_password_for_your_MySQL
    DB_NAME=clinicflow_db
    JWT_SECRET=change_me_to_a_long_random_string
    CORS_ORIGIN=http://localhost:3000
