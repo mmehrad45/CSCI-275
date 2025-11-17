@@ -1,0 +1,41 @@
+
+> clinicflow@0.1.0 build
+> cross-env NEXT_CACHE_DIR=.next-cache-local next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 1178ms
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/api/auth/login/route.ts
+52:9  Error: 'user' is never reassigned. Use 'const' instead.  prefer-const
+52:15  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/api/doctors/route.ts
+21:34  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/api/patients/route.ts
+11:33  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/api/rooms/route.ts
+11:32  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/api/users/route.ts
+18:32  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/login/page.tsx
+9:17  Warning: 'role' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+9:30  Warning: 'loading' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/AssistantChat.tsx
+114:3  Warning: 'patients' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/db.ts
+16:1  Error: Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free.  @typescript-eslint/ban-ts-comment
+20:3  Error: Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free.  @typescript-eslint/ban-ts-comment
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

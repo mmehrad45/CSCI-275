@@ -1,0 +1,13 @@
+### Create a new patient
+POST http://localhost:3000/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "phone": "6041234567",
+  "healthNumber": "PHN12345"
+}
+
+### Get all patients
+GET http://localhost:3000/api/patients
