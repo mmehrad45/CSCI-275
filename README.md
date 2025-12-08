@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClinicFlow
 
-## Getting Started
+ClinicFlow is a web-based application designed to streamline appointment scheduling and daily operations for clinics.
 
-First, run the development server:
+The platform provides role-specific interfaces for clinic managers, receptionists, and doctors, helping reduce scheduling errors, improve workflow visibility, and centralize clinic operations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project was developed as part of CSCI-275 (Software Engineering) using Agile methodology.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+App: https://csci-275-six.vercel.app
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Problem Statement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Many clinics rely on manual or outdated booking systems, which can result in:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Double bookings and scheduling conflicts
+- High administrative workload
+- Limited visibility into clinic operations
+- Poor patient experience
 
-## Deploy on Vercel
+ClinicFlow addresses these issues by offering a centralized, role-based scheduling and workflow system.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Features
+
+- Role-based authentication (Manager, Receptionist, Doctor)
+- Appointment scheduling with conflict awareness
+- Doctor availability and calendar views
+- Patient record management (create, edit, view)
+- Manager dashboard with operational overview
+- Task assignment between staff roles
+- Integrated chatbot for workflow guidance
+- Responsive user interface for desktop and mobile
+
+---
+
+## Tech Stack
+
+Frontend:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+Backend:
+- Node.js
+- Express
+- REST APIs
+- JWT authentication
+
+Database:
+- PostgreSQL
+- Prisma ORM
+
+Deployment:
+- Vercel
+- GitHub
+
+---
+
+## System Overview
+
+ClinicFlow follows a standard three-layer architecture:
+
+1. Frontend (Next.js)  
+   Handles user interaction, role-based dashboards, and chatbot UI.
+
+2. Backend (Node.js / Express)  
+   Manages authentication, business logic, and API endpoints.
+
+3. Database (PostgreSQL)  
+   Stores users, patients, appointments, availability, and tasks.
+
+---
+
+## User Roles
+
+Manager:
+- View clinic-wide appointments
+- Manage staff accounts
+- Assign and track tasks
+- Monitor clinic operations
+
+Receptionist:
+- Register patients
+- Schedule and manage appointments
+- View doctor availability
+- Handle assigned tasks
+
+Doctor:
+- View personal schedule
+- Access patient visit details
+- Update appointment status
+
+---
+
+## Chatbot Assistant
+
+ClinicFlow includes a lightweight chatbot embedded in the UI.
+
+The chatbot:
+- Answers common “how-to” questions
+- Guides users through tasks like booking or cancelling appointments
+- Uses predefined responses (no live data access)
+- Improves usability without introducing system risk
+
+---
+
+## Running the Project Locally
+
+1. Clone the repository:
+
+2. Install dependencies:
+
+3. Create a `.env.local` file and add required variables:
+
+4. Start the development server:
+
+Open http://localhost:3000 in your browser.
+
+---
+
+## My Role
+
+I was the project originator and primary developer for ClinicFlow.
+
+My responsibilities included:
+- Conceptualizing the ClinicFlow platform and defining the problem scope
+- Designing the system architecture and core workflows
+- Selecting the technology stack and defining dependencies
+- Implementing the full application logic across frontend and backend
+- Designing database models and API endpoints
+- Integrating authentication, role-based access, and scheduling logic
+- Deploying the application and maintaining the codebase
+
+---
+
+## Contributors
+
+- Mazda Mehrad (Product Owner, Sprint Master, Developer)
+- Jay Patel (Developer)
+- Frederic Tchedou (Documentation & Unit Testing)
+- Gagandeep Singh (Documentation)
+- Joel Victor Ssemambo (Documentation & Unit Testing)
+
+---
+
+## Notes
+
+This project was built for educational purposes while studying CSCI275 with Johnny Zhang at Columbia College Vancouver.
+Additional security and validation would be required for real-world deployment.
